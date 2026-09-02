@@ -8,21 +8,25 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{height:100%;background:#f3f4f6;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
   .top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;gap:10px;padding:8px 14px;background:#1f2937;color:#fff}
-  .top .t{font-size:14px;font-weight:600}
-  .top a{margin-left:auto;font-size:13px;color:#fff;background:#2563eb;padding:6px 12px;border-radius:8px;text-decoration:none}
+  .top .t{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top .actions{margin-left:auto;display:flex;gap:8px}
+  .top a{font-size:13px;color:#fff;background:#2563eb;padding:6px 12px;border-radius:8px;text-decoration:none;white-space:nowrap}
+  .top a.secondary{background:#4b5563}
   iframe{position:fixed;top:48px;left:0;right:0;bottom:0;width:100%;border:0;background:#fff}
-  .tip{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:11;font-size:12px;color:#374151;background:rgba(255,255,255,.92);padding:6px 12px;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,.12);display:none}
+  .tip{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:11;font-size:12px;color:#374151;background:rgba(255,255,255,.92);padding:6px 12px;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,.12);display:none;max-width:90%;text-align:center}
 </style>
 </head>
 <body>
   <div class="top">
     <span class="t">马澳文 · 电商美工作品集</span>
-    <a href="maaowen-ecom-portfolio.pptx" download>下载原文件</a>
+    <div class="actions">
+      <a id="fullscreen" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffrannksavalza-source.github.io%2Fmaaowen-ecom-portfolio.pptx" target="_blank">全屏浏览</a>
+      <a class="secondary" href="maaowen-ecom-portfolio.pptx" download>下载原文件</a>
+    </div>
   </div>
-  <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Ffrannksavalza-source.github.io%2Fmaaowen-ecom-portfolio.pptx"></iframe>
-  <div class="tip" id="tip">微信里若打不开查看器，点右上角「…」→「在浏览器打开」</div>
+  <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Ffrannksavalza-source.github.io%2Fmaaowen-ecom-portfolio.pptx&wdAr=1.7777777777777777"></iframe>
+  <div class="tip" id="tip">微信里若预览加载不完整，点右上角「…」→「在浏览器打开」，或点右上角「全屏浏览」</div>
   <script>
-    // 检测微信环境，提示用浏览器打开
     if(/MicroMessenger/i.test(navigator.userAgent)){document.getElementById('tip').style.display='block';}
   </script>
 </body>
