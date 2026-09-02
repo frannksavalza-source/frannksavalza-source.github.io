@@ -2,32 +2,81 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
 <title>马澳文 · 电商美工作品集（在线浏览）</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{height:100%;background:#f3f4f6;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
-  .top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;gap:10px;padding:8px 14px;background:#1f2937;color:#fff}
-  .top .t{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .top .actions{margin-left:auto;display:flex;gap:8px}
-  .top a{font-size:13px;color:#fff;background:#2563eb;padding:6px 12px;border-radius:8px;text-decoration:none;white-space:nowrap}
-  .top a.secondary{background:#4b5563}
-  iframe{position:fixed;top:48px;left:0;right:0;bottom:0;width:100%;border:0;background:#fff}
-  .tip{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:11;font-size:12px;color:#374151;background:rgba(255,255,255,.92);padding:6px 12px;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,.12);display:none;max-width:90%;text-align:center}
+  html,body{background:#0f172a;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+  .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:10px 14px;background:#1f2937;color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+  .top .t{font-size:14px;font-weight:600}
+  .top .meta{font-size:12px;color:#9ca3af;margin-left:4px}
+  .top a{margin-left:auto;font-size:13px;color:#fff;background:#2563eb;padding:6px 12px;border-radius:8px;text-decoration:none;white-space:nowrap}
+  .top a.secondary{background:#4b5563;margin-left:8px}
+  .wrap{max-width:960px;margin:0 auto;padding:14px 12px 80px}
+  .slide{background:#fff;border-radius:14px;margin-bottom:16px;padding:16px;box-shadow:0 6px 24px rgba(0,0,0,.35);position:relative}
+  .num{position:absolute;top:12px;left:12px;background:#1f2937;color:#fff;font-size:12px;font-weight:700;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+  .imgs{margin-top:8px}
+  .imgs img{width:100%;border-radius:10px;display:block;margin-bottom:10px;background:#f3f4f6}
+  .imgs.multi{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+  .imgs.multi img{margin-bottom:0;height:100%;object-fit:cover}
+  .text{margin-top:14px;color:#1f2937;line-height:1.7}
+  .text h4{font-size:16px;font-weight:700;margin:12px 0 4px;color:#111827}
+  .text p{font-size:14px;margin-bottom:8px;color:#374151}
+  .bar{position:fixed;bottom:0;left:0;right:0;z-index:20;display:flex;gap:10px;justify-content:center;padding:10px;background:rgba(31,41,55,.95);backdrop-filter:blur(6px)}
+  .bar button{font-size:13px;color:#fff;background:#374151;border:0;padding:8px 16px;border-radius:20px;cursor:pointer}
+  .bar .p{color:#e5e7eb;font-size:13px;align-self:center;min-width:60px;text-align:center}
+  @media (max-width:600px){
+    .imgs.multi{grid-template-columns:1fr}
+    .text h4{font-size:15px}
+  }
 </style>
 </head>
 <body>
   <div class="top">
-    <span class="t">马澳文 · 电商美工作品集</span>
-    <div class="actions">
-      <a id="fullscreen" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffrannksavalza-source.github.io%2Fmaaowen-ecom-portfolio.pptx" target="_blank">全屏浏览</a>
-      <a class="secondary" href="maaowen-ecom-portfolio.pptx" download>下载原文件</a>
-    </div>
+    <span class="t">马澳文 · 电商美工作品集</span><span class="meta">共 16 页 · 在线浏览</span>
+    <a href="maaowen-ecom-portfolio.pptx" download>下载原文件</a>
+    <a class="secondary" href="./">返回主页</a>
   </div>
-  <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Ffrannksavalza-source.github.io%2Fmaaowen-ecom-portfolio.pptx&wdAr=1.7777777777777777"></iframe>
-  <div class="tip" id="tip">微信里若预览加载不完整，点右上角「…」→「在浏览器打开」，或点右上角「全屏浏览」</div>
+  <div class="wrap" id="wrap">
+<section class="slide" id="s1"><span class="num">01</span><div class="imgs single"><img src="pptx-assets/image.png" loading="lazy" alt="第1页"></div><div class="text"><p>E-COMMERCE VISUAL PORTFOLIO 电商美工 · 视觉设计作品集 主图｜详情页｜活动页｜AIGC 视觉延展 马澳文  ·  电商美工 / 电商视觉设计 深圳 · 2026</p></div></section>
+<section class="slide" id="s2"><span class="num">02</span><div class="text"><h4>02</h4><p>电商思维与 AIGC 能力，让视觉内容更高效地落地 电子商务专业 · AIGC 视频制作与电商内容运营经验 PROFILE 马澳文 电商美工 / 电商视觉设计 教育背景 武汉铁路职业技术学院 · 电子商务 · GPA 3.6 工作经历 深圳贝盈数字创意科技 · AIGC 视频制作 核心能力 AI 视觉创作、提示词、IP 设定、视频剪辑 联系信息 15217362595 · 1584811377@qq.com MORI LAB · 电商视觉设计作品集</p><h4>02</h4></div></section>
+<section class="slide" id="s3"><span class="num">03</span><div class="text"><h4>03</h4><p>作品不是零散图片，而是一套完整的商业表达</p><h4>01</h4><p>品牌视觉设定</p><h4>02</h4><p>商品主图体系</p><h4>03</h4><p>详情页结构</p><h4>04</h4><p>大促活动页面</p><h4>05</h4><p>修图与延展</p><h4>06</h4><p>方法与复盘 MORI LAB · 电商视觉设计作品集</p><h4>03</h4></div></section>
+<section class="slide" id="s4"><span class="num">04</span><div class="imgs single"><img src="pptx-assets/image2.png" loading="lazy" alt="第4页"></div><div class="text"><h4>04</h4><p>先统一品牌语言，再开始做页面 虚构品牌案例 · MORI LAB 森研 MORI LAB 为敏感肌提供安静、可信赖的植物修护体验 关键词 克制 / 天然 / 科学 / 呼吸感 MORI LAB · 电商视觉设计作品集</p><h4>04</h4></div></section>
+<section class="slide" id="s5"><span class="num">05</span><div class="text"><h4>05</h4><p>目标用户需要的不是“成分堆砌”，而是低决策压力 用户痛点 成分复杂 害怕刺激 难以判断效果</p><h4>01</h4><p>信息策略 先讲肤感 再讲成分 最后给信任背书</p><h4>02</h4><p>视觉回应 留白降低压力 自然色建立温和感 黑色信息强化专业</p><h4>03</h4><p>MORI LAB · 电商视觉设计作品集</p><h4>05</h4></div></section>
+<section class="slide" id="s6"><span class="num">06</span><div class="imgs multi"><img src="pptx-assets/image3.png" loading="lazy" alt="第6页"><img src="pptx-assets/image4.png" loading="lazy" alt="第6页"><img src="pptx-assets/image5.png" loading="lazy" alt="第6页"></div><div class="text"><h4>06</h4><p>主图先抓住“清透修护”，再补充价格与信任理由 品牌主图 建立第一印象 卖点主图 把成分视觉化 场景主图 让用户代入肤感 MORI LAB · 电商视觉设计作品集</p><h4>06</h4></div></section>
+<section class="slide" id="s7"><span class="num">07</span><div class="imgs multi"><img src="pptx-assets/image6.png" loading="lazy" alt="第7页"><img src="pptx-assets/image7.png" loading="lazy" alt="第7页"><img src="pptx-assets/image8.png" loading="lazy" alt="第7页"></div><div class="text"><h4>07</h4><p>同一产品，用三种信息角度适配不同流量入口 以下为版式演示，不代表真实投放数据 新品种草 敏感肌也能轻松用 清透修护精华 问题切入 换季泛红反复？ 先稳住屏障 利益点 水感不黏腻 一抹快速吸收 MORI LAB · 电商视觉设计作品集</p><h4>07</h4></div></section>
+<section class="slide" id="s8"><span class="num">08</span><div class="text"><h4>08</h4><p>详情页的节奏：先让人愿意看，再让人相信</p><h4>01</h4><p>情绪首屏 清透修护，一滴稳肤</p><h4>02</h4><p>痛点共鸣 干、红、紧绷的换季困扰</p><h4>03</h4><p>成分证据 茶叶提取物 × 山茶花精粹</p><h4>04</h4><p>肤感演示 水感延展，吸收后不黏</p><h4>05</h4><p>信任收口 使用方法、参数、保障 MORI LAB · 电商视觉设计作品集</p><h4>08</h4></div></section>
+<section class="slide" id="s9"><span class="num">09</span><div class="imgs multi"><img src="pptx-assets/image9.png" loading="lazy" alt="第9页"><img src="pptx-assets/image10.png" loading="lazy" alt="第9页"><img src="pptx-assets/image11.png" loading="lazy" alt="第9页"><img src="pptx-assets/image12.png" loading="lazy" alt="第9页"></div><div class="text"><p>DETAIL PAGE 一条详情页，统一情绪与证据 01 情绪首屏 02 成分视觉 03 使用场景 04 产品收口 模拟商业案例 · 页面为面试展示比例</p><h4>09</h4></div></section>
+<section class="slide" id="s10"><span class="num">10</span><div class="imgs single"><img src="pptx-assets/image13.png" loading="lazy" alt="第10页"></div><div class="text"><h4>10</h4><p>大促页面既要有氛围，也要让优惠信息一眼可扫 618 清透修护季 核心爆品直降 满 399 减 60 立即焕新肌肤 MORI LAB · 电商视觉设计作品集</p><h4>10</h4></div></section>
+<section class="slide" id="s11"><span class="num">11</span><div class="imgs multi"><img src="pptx-assets/image14.png" loading="lazy" alt="第11页"><img src="pptx-assets/image15.png" loading="lazy" alt="第11页"><img src="pptx-assets/image16.png" loading="lazy" alt="第11页"></div><div class="text"><h4>11</h4><p>一套活动视觉，需要适配首页、直播间与信息流 店铺首页 16:9 直播间竖版 信息流素材 统一字体、色彩与商品主体；根据尺寸重新安排信息层级，而不是机械缩放。 MORI LAB · 电商视觉设计作品集</p><h4>11</h4></div></section>
+<section class="slide" id="s12"><span class="num">12</span><div class="imgs multi"><img src="pptx-assets/image17.png" loading="lazy" alt="第12页"><img src="pptx-assets/image18.png" loading="lazy" alt="第12页"></div><div class="text"><h4>12</h4><p>修图不是“磨平皮肤”，而是让产品质感可信 人像精修重点 保留皮肤纹理 · 统一肤色 · 控制高光 产品精修重点 玻璃通透 · 边缘干净 · 液体层次 MORI LAB · 电商视觉设计作品集</p><h4>12</h4></div></section>
+<section class="slide" id="s13"><span class="num">13</span><div class="imgs multi"><img src="pptx-assets/image19.png" loading="lazy" alt="第13页"><img src="pptx-assets/image20.png" loading="lazy" alt="第13页"></div><div class="text"><h4>13</h4><p>产品精修：从原始拍摄到电商可用成片 模拟修图练习案例 · 重点展示处理判断与商业完成度 BEFORE AFTER 原片问题 曝光偏暗 · 背景折痕 · 反光杂乱 处理重点 除尘净面 · 玻璃通透 · 光影塑形 · 背景统一 MORI LAB · 电商视觉设计作品集</p><h4>13</h4></div></section>
+<section class="slide" id="s14"><span class="num">14</span><div class="imgs multi"><img src="pptx-assets/image21.png" loading="lazy" alt="第14页"><img src="pptx-assets/image22.png" loading="lazy" alt="第14页"></div><div class="text"><h4>14</h4><p>人像精修：保留真实纹理，而不是把皮肤磨平 模拟修图练习案例 · 遵循自然、克制的商业精修原则 BEFORE AFTER 原片问题 肤色不均 · 黑眼圈 · 临时瑕疵 · 杂发 处理重点 统一肤色 · 减淡暗沉 · 清理杂发 · 保留毛孔 MORI LAB · 电商视觉设计作品集</p><h4>14</h4></div></section>
+<section class="slide" id="s15"><span class="num">15</span><div class="text"><h4>15</h4><p>我的工作方法，让电商视觉与 AIGC 内容协同落地</p><h4>01</h4><p>分析需求 目标人群、平台与传播目标</p><h4>02</h4><p>提炼卖点 商品信息与用户购买理由</p><h4>03</h4><p>策划内容 脚本、角色、分镜与提示词</p><h4>04</h4><p>生成视觉 Midjourney / SD / 即梦等</p><h4>05</h4><p>整合制作 剪映剪辑、字幕、配音与包装</p><h4>06</h4><p>复盘迭代 统一风格并沉淀可复用模板 MORI LAB · 电商视觉设计作品集</p><h4>15</h4></div></section>
+<section class="slide" id="s16"><span class="num">16</span><div class="imgs single"><img src="pptx-assets/image23.png" loading="lazy" alt="第16页"></div><div class="text"><p>期待把好看， 变成更清晰的购买理由。 求职方向：电商美工 / 电商视觉设计 马澳文 15217362595 1584811377@qq.com 现居深圳 · 随时到岗 注：MORI LAB 为虚构品牌，案例视觉使用 AI 生成素材，仅用于能力展示。</p></div></section>
+  </div>
+  <div class="bar">
+    <button onclick="go(-1)">上一页</button>
+    <span class="p"><span id="cur">1</span>/16</span>
+    <button onclick="go(1)">下一页</button>
+  </div>
   <script>
-    if(/MicroMessenger/i.test(navigator.userAgent)){document.getElementById('tip').style.display='block';}
+    var secs = Array.from(document.querySelectorAll('.slide'));
+    function go(d){
+      var h = window.innerHeight, y = window.scrollY;
+      var best = 0, bestDist = Infinity;
+      secs.forEach(function(s,i){
+        var rect = s.getBoundingClientRect();
+        var dist = Math.abs(rect.top - 60);
+        if(dist < bestDist){ bestDist = dist; best = i; }
+      });
+      var next = Math.max(0, Math.min(secs.length-1, best + d));
+      secs[next].scrollIntoView({behavior:'smooth', block:'start'});
+    }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ document.getElementById('cur').textContent = e.target.id.replace('s',''); } });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(function(s){ io.observe(s); });
   </script>
 </body>
 </html>
