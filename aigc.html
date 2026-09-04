@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>马澳文 · AIGC 电商视觉设计作品集</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#111;height:100%;overflow:hidden;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#eee}
+.wrap{position:fixed;inset:0;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);z-index:5}
+.top .t{font-size:15px;font-weight:600;letter-spacing:.5px}
+.top a.dl{font-size:13px;color:#fff;text-decoration:none;background:#2563eb;padding:7px 14px;border-radius:20px}
+.stage{flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
+.slide{display:none;max-width:100%;max-height:100%;width:auto;height:auto;box-shadow:0 6px 30px rgba(0,0,0,.5)}
+.slide.on{display:block}
+.bar{display:flex;align-items:center;justify-content:center;gap:18px;padding:12px;background:rgba(0,0,0,.55)}
+.bar button{font-size:15px;color:#fff;background:#333;border:none;border-radius:22px;padding:10px 22px;cursor:pointer}
+.bar button:active{background:#444}
+.bar .pg{font-size:14px;min-width:84px;text-align:center;color:#bbb}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="t">马澳文 · AIGC 电商视觉设计作品集</div>
+    <a class="dl" href="maaowen-aigc-portfolio.pdf" download>下载 PDF</a>
+  </div>
+  <div class="stage" id="stage">
+      <img class="slide" data-i="0" src="pdf-aigc/page_01.jpg" alt="第 1 页" loading="lazy">
+      <img class="slide" data-i="1" src="pdf-aigc/page_02.jpg" alt="第 2 页" loading="lazy">
+      <img class="slide" data-i="2" src="pdf-aigc/page_03.jpg" alt="第 3 页" loading="lazy">
+      <img class="slide" data-i="3" src="pdf-aigc/page_04.jpg" alt="第 4 页" loading="lazy">
+      <img class="slide" data-i="4" src="pdf-aigc/page_05.jpg" alt="第 5 页" loading="lazy">
+      <img class="slide" data-i="5" src="pdf-aigc/page_06.jpg" alt="第 6 页" loading="lazy">
+      <img class="slide" data-i="6" src="pdf-aigc/page_07.jpg" alt="第 7 页" loading="lazy">
+      <img class="slide" data-i="7" src="pdf-aigc/page_08.jpg" alt="第 8 页" loading="lazy">
+      <img class="slide" data-i="8" src="pdf-aigc/page_09.jpg" alt="第 9 页" loading="lazy">
+      <img class="slide" data-i="9" src="pdf-aigc/page_10.jpg" alt="第 10 页" loading="lazy">
+      <img class="slide" data-i="10" src="pdf-aigc/page_11.jpg" alt="第 11 页" loading="lazy">
+      <img class="slide" data-i="11" src="pdf-aigc/page_12.jpg" alt="第 12 页" loading="lazy">
+      <img class="slide" data-i="12" src="pdf-aigc/page_13.jpg" alt="第 13 页" loading="lazy">
+  </div>
+  <div class="bar">
+    <button id="prev">上一页</button>
+    <div class="pg"><span id="cur">1</span> / 13</div>
+    <button id="next">下一页</button>
+  </div>
+</div>
+<script>
+var slides=[].slice.call(document.querySelectorAll('.slide'));
+var i=0;
+function show(k){
+  if(k<0||k>=slides.length)return;
+  slides[i].classList.remove('on');
+  i=k; slides[i].classList.add('on');
+  document.getElementById('cur').textContent=i+1;
+}
+show(0);
+document.getElementById('prev').onclick=function(){show(i-1)};
+document.getElementById('next').onclick=function(){show(i+1)};
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowLeft')show(i-1);
+  if(e.key==='ArrowRight')show(i+1);
+});
+var sx=0;
+var st=document.getElementById('stage');
+st.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},false);
+st.addEventListener('touchend',function(e){
+  var dx=e.changedTouches[0].clientX-sx;
+  if(dx>50)show(i-1); else if(dx<-50)show(i+1);
+},false);
+</script>
+</body>
+</html>
